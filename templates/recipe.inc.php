@@ -1,5 +1,35 @@
 <script type="text/javascript">
-  
+  const addMovie = (movie) => {
+    async function addingMovie() {
+      let response = await fetch(`${APIURL}/watchlist`, {
+        method: 'POST',
+        body: JSON.stringify({
+          title: movie.title,
+          posterPath: movie.poster_path,
+          movieDBid: movie.id,
+          releaseDate: movie.release_date,
+          watched: false
+        }),
+        headers: new Headers({
+          'Content-Type': 'application/json',
+          "Authorization": localStorage.getItem('token')
+        })
+      })
+        
+        response = await response.json()
+              
+        if (typeof response === "object") {
+            if(response.error.name === "SequelizeUniqueConstraintError"){
+                alert.show('Movie already on Watchlist!')
+            } else {
+                alert.error("There was a problem with the server, try again later!")
+            }
+        } else {
+            alert.success(`${response}`)
+        }
+      } 
+      addingMovie()
+}
   
   
 </script>
