@@ -3,6 +3,9 @@
 $id =
 
 $file = $_FILES['file'];
+$title = $_POST['title'];
+$instruct = $_POST['instruct'];
+$desc = $_POST['desc'];
 
 if (empty($title) || empty($desc) || empty($instruct) || empty($file)) {
   header("Location: ../addrecipe.php?error=emptyfields&title=".$title."&desc=".$desc."&instruct=".$instruct);
