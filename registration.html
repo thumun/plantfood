@@ -32,12 +32,13 @@
             <div class="container">
                 <div class="block-heading">
                     <h2 class="text-info">Registration</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc quam urna, dignissim nec auctor in, mattis vitae leo.</p>
+                    <p>Make an account and start posting recipes!</p>
                 </div>
-                <form>
-                    <div class="form-group"><label for="name">Name</label><input class="form-control item" type="text" id="name"></div>
-                    <div class="form-group"><label for="password">Password</label><input class="form-control item" type="password" id="password"></div>
-                    <div class="form-group"><label for="email">Email</label><input class="form-control item" type="email" id="email"></div><button class="btn btn-primary btn-block" type="submit">Sign Up</button>
+                <form id="signUpForm">
+                    <div class="form-group"><label for="name">Username</label><input required class="form-control item" type="text" id="username"></div>
+                    <div class="form-group"><label for="email">Email</label><input required class="form-control item" type="email" id="email"></div>
+                    <div class="form-group"><label for="password">Password</label><input required class="form-control item" type="password" id="password"></div>
+                    <button class="btn btn-primary btn-block" type="submit">Sign Up</button>
                 </form>
             </div>
         </section>
@@ -88,6 +89,13 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.js"></script>
     <script src="assets/js/smoothproducts.min.js"></script>
     <script src="assets/js/theme.js"></script>
+    <script src="assets/js/registration.js"></script>
+    <script type="text/javascript">
+        function boop(){
+            e.preventDefault();
+            console.log("plea se")
+        }
+    </script>
 </body>
 
 </html>
