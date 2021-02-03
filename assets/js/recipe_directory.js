@@ -1,5 +1,6 @@
 var recipearray = [];
 var arrlength = 0;
+var recipetitle = [];
 
 //get request here 
 function getvals(){
@@ -12,15 +13,14 @@ function getvals(){
             if (xhr.status == 200) { 
                 recipearray.empty(); 
                 recipearray = JSON.parse(xhr.responseText); // parse get array -- need img and title
-                updaterecipes();
+                //updaterecipes();
             }
         }
     }
 }
 
 function pageLoaded(){
-    updaterecipes(); //replace with getvals() since updaterecipes already in get req
-
+    getvals(); //replace with getvals() since updaterecipes already in get req
 }
 
 function updaterecipes(){
@@ -37,8 +37,8 @@ function updaterecipes(){
         arrlength = Math.floor(recipearray.length / 7); 
     }
 
-    for (let j = 0; j < recipearray.length; j++){
-        if 
+    for (let j = 1; j < recipearray.length; j+= 7){
+        recipetitle.push(recipearay[1]);
     }
 
 
