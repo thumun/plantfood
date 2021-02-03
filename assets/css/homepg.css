@@ -40,3 +40,10 @@ body{
 	text-align: center;
 }
 
+.ingredients, .directions {
+padding-left: 50px;
+font-size: 25px;
+
+	
+}
+
