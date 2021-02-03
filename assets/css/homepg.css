@@ -26,10 +26,17 @@ body{
 	position:relative;
 	top:1px;
 }
-a:hover {
-    color: yellow;
-  }
 
-        
+.text-head {
+	color: rgb(26, 128, 0);
+	text-align: center;
+}
 
+.buttonformat{
+	text-align: center;
+}
+
+.centerplease{
+	text-align: center;
+}
 
