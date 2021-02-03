@@ -50,7 +50,7 @@ function updaterecipes(){
         var title = recipearray[i].title;
         let node= document.createElement("div");
         node.className = "col-md-6 col-lg-4 item";
-        node.innerHTML = '<center>' + title + '</center>' + '<a class="lightbox" href="assets/img/scenery/image1.jpg"><img class="img-thumbnail img-fluid image" src="assets/img/scenery/image1.jpg"></a>'; //can add clickable att to img
+        node.innerHTML = '<center>' + title + '</center>' + '<a class="lightbox" href="assets/img/img' + recipearray[i].id + '.jpg"><img class="img-thumbnail img-fluid image" src="assets/img/img' + recipearray[i].id + '.jpg"></a>'; //can add clickable att to img
 
         gallery.appendChild(node);
     }
