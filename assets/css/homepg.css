@@ -40,8 +40,9 @@ body{
 	text-align: center;
 }
 
-.ingredients, .directions {
-padding-left: 50px;
+.instuctions, .directions {
+padding-left: 100px;
+padding-right: 100px;
 font-size: 25px;
 
 	
