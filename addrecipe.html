@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html>
-<!-- test -->
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <title>Login - Brand</title>
+    <title>Add Recipe</title>
+    <link rel="stylesheet" href="assets/addrecipecss.css">
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,700,700i,600,600i">
     <link rel="stylesheet" href="assets/fonts/simple-line-icons.min.css">
@@ -18,26 +19,27 @@
             <div class="collapse navbar-collapse" id="navcol-1">
                 <ul class="nav navbar-nav ml-auto">
                     <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
-                    <li class="nav-item"><a class="nav-link active" href="gallery.html">Recipes</a></li>
-                    <li class="nav-item"><a class="nav-link active" href="contact-us.html">Add recipe</a></li>
-                    <li class="nav-item"><a class="nav-link active" href="login.html">Log in / Sign up</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="contact-us.html">Recipes</a></li>
+                </ul>
+                <ul class="nav navbar-nav">
+                    <li class="nav-item"><a class="nav-link active" href="#">Add recipe</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="#">Log in / Sign up</a></li>
                 </ul>
             </div>
         </div>
     </nav>
-    <main class="page login-page">
+    <main class="page contact-us-page">
         <section class="clean-block clean-form dark">
             <div class="container">
                 <div class="block-heading">
-                    <h2 class="text-info">Log In</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc quam urna, dignissim nec auctor in, mattis vitae leo.</p>
+                    <h2 class="text-info">Add a Recipe</h2>
                 </div>
                 <form>
-                    <div class="form-group"><label for="email">Email</label><input class="form-control item" type="email" id="email"></div>
-                    <div class="form-group"><label for="password">Password</label><input class="form-control" type="password" id="password"></div>
-                    <div class="form-group">
-                        <div class="form-check"><input class="form-check-input" type="checkbox" id="checkbox"><label class="form-check-label" for="checkbox">Remember me</label></div>
-                    </div><button class="btn btn-primary btn-block" type="submit">Log In</button>
+                    <label>Image</label><div class="form-group"><input class="form-control2" type="file" name="recipefile"></div>
+                    <div class="form-group"><label>Title</label><input class="form-control" type="text" name="recipetitle"></div>
+                    <div class="form-group"><label>Ingredients (separate with a comma)</label><input class="form-control" type="text" name="recipeingred"></div>
+                    <div class="form-group"><label>Directions</label><textarea class="form-control" name="recipedirections"></textarea></div>
+                    <div class="form-group"><button class="btn btn-primary btn-block" type="submit">Submit</button></div>
                 </form>
             </div>
         </section>
