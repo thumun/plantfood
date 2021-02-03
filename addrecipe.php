@@ -55,10 +55,10 @@
             }
           ?>
                 <form>
-                    <label>Image</label><div class="form-group"><input class="form-control2" type="file" name="recipefile"></div>
-                    <div class="form-group"><label>Title</label><input class="form-control" type="text" name="recipetitle"></div>
-                    <div class="form-group"><label>Ingredients (separate with a comma)</label><input class="form-control" type="text" name="recipeingred"></div>
-                    <div class="form-group"><label>Directions</label><textarea class="form-control" name="recipedirections"></textarea></div>
+                    <label>Image</label><div class="form-group"><input class="form-control2" type="file" name="file"></div>
+                    <div class="form-group"><label>Title</label><input class="form-control" type="text" name="title"></div>
+                    <div class="form-group"><label>Ingredients (separate with a comma)</label><input class="form-control" type="text" name="ingred"></div>
+                    <div class="form-group"><label>Directions</label><textarea class="form-control" name="direct"></textarea></div>
                     <div class="form-group"><button class="btn btn-primary btn-block" type="submit">Submit</button></div>
                 </form>
             </div>
