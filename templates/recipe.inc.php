@@ -1,5 +1,38 @@
 <script type="text/javascript">
-  
+  function returnArray(string) {
+    if(string === ""){
+      return null
+    } else {
+      let newArray = string.split(",").map(item => item.trim() )
+      return newArray
+    }
+  }
+
+  function addRecipe () {
+    async function addingRecipe() {
+      let response = await fetch(``, {
+        method: 'POST',
+        body: JSON.stringify({
+          title: title,
+          directions: directions,
+          ingredients: returnArray(ingredients),
+        }),
+        headers: new Headers({
+          'Content-Type': 'application/json',
+          "Authorization": localStorage.getItem('token')
+        })
+      })
+        
+        response = await response.json()
+              
+        if(response.recipe){
+          let recipeId = response.recipe.id
+        } else {
+          alert("There was an error with the server! Try again later.")
+        }
+      } 
+      addingRecipe()
+}
   
   
 </script>
@@ -11,11 +44,11 @@ $id =
 
 $file = $_FILES['file'];
 $title = $_POST['title'];
-$instruct = $_POST['instruct'];
-$desc = $_POST['desc'];
+$instruct = $_POST['ingred'];
+$desc = $_POST['direct'];
 
-if (empty($title) || empty($desc) || empty($instruct) || empty($file)) {
-  header("Location: ../addrecipe.php?error=emptyfields&title=".$title."&desc=".$desc."&instruct=".$instruct);
+if (empty($title) || empty($direct) || empty($ingred) || empty($file)) {
+  header("Location: ../addrecipe.php?error=emptyfields);
   exit();
 } else {
 
@@ -38,7 +71,7 @@ if (empty($title) || empty($desc) || empty($instruct) || empty($file)) {
       if ($fileSize < 1000000) {
 
         $fileNameNew = "img".$id.".".$fileActualExt;
-        $fileDestination = '../assets/images/'.$fileNameNew;
+        $fileDestination = '../assets/img/'.$fileNameNew;
 
          move_uploaded_file($fileTmpName, $fileDestination);
         

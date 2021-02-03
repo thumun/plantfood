@@ -2,3 +2,10 @@
   clear:both;
   padding-top: 10px;
 }
+
+.error {
+ color: red;
+ align-content: center;
+ font-weight: bold;
+  padding: 20px;
+}

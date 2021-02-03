@@ -2,7 +2,7 @@
 <html>
 
 <body>
-    <p style="text-align: center;"><img src="../assets/images/recipe<?php echo $idn;?>.jpg" alt="food" width="620" height="342" /></p>
+    <p style="text-align: center;"><img src="../assets/img/img<?php echo $idn;?>.png" alt="food" width="620" height="342" /></p>
     <p style="text-align: center;"><strong>Title</strong></p>
     <p><em>Ingredients:</em></p>
         <ul>
