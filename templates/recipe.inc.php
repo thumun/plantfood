@@ -34,6 +34,18 @@ if (empty($title) || empty($desc) || empty($instruct) || empty($file)) {
         $fileDestination = '../assets/images/'.$fileNameNew;
 
          move_uploaded_file($fileTmpName, $fileDestination);
+        
+        $dispid = "<?php
+        $idn = '$id';
+        ?> ";
+
+        $disp_main = file_get_contents('templates/recipe.temp.php');
+
+        $disp_path = "recipes/recipe$id.php";
+
+        file_put_contents($disp_path, $dispid);
+        file_put_contents($disp_path, $disp_main, FILE_APPEND);
+
 
       } else {
         header("Location: ../addrecipe.php?error=toolarge");
@@ -53,13 +65,3 @@ if (empty($title) || empty($desc) || empty($instruct) || empty($file)) {
 
 
 
-$dispid = "<?php
-$idn = '$id';
-?> ";
-
-$disp_main = file_get_contents('templates/recipe.temp.php');
-
-$disp_path = "recipes/recipe$id.php";
-
-file_put_contents($disp_path, $dispid);
-file_put_contents($disp_path, $disp_main, FILE_APPEND);
