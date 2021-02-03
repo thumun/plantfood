@@ -38,7 +38,7 @@ if (empty($title) || empty($direct) || empty($ingred) || empty($file)) {
       if ($fileSize < 1000000) {
 
         $fileNameNew = "img".$id.".".$fileActualExt;
-        $fileDestination = '../assets/images/'.$fileNameNew;
+        $fileDestination = '../assets/img/'.$fileNameNew;
 
          move_uploaded_file($fileTmpName, $fileDestination);
         
