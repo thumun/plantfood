@@ -4,7 +4,8 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <title>Contact Us - Brand</title>
+    <title>Add Recipe</title>
+    <link rel="stylesheet" href="assets/addrecipecss.css">
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,700,700i,600,600i">
     <link rel="stylesheet" href="assets/fonts/simple-line-icons.min.css">
@@ -31,15 +32,14 @@
         <section class="clean-block clean-form dark">
             <div class="container">
                 <div class="block-heading">
-                    <h2 class="text-info">Contact Us</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc quam urna, dignissim nec auctor in, mattis vitae leo.</p>
+                    <h2 class="text-info">Add a Recipe</h2>
                 </div>
                 <form>
-                    <div class="form-group"><label>Name</label><input class="form-control" type="text"></div>
-                    <div class="form-group"><label>Subject</label><input class="form-control" type="text"></div>
-                    <div class="form-group"><label>Email</label><input class="form-control" type="email"></div>
-                    <div class="form-group"><label>Message</label><textarea class="form-control"></textarea></div>
-                    <div class="form-group"><button class="btn btn-primary btn-block" type="submit">Send</button></div>
+                    <label>Image</label><div class="form-group"><input class="form-control2" type="file" name="recipefile"></div>
+                    <div class="form-group"><label>Title</label><input class="form-control" type="text" name="recipetitle"></div>
+                    <div class="form-group"><label>Ingredients (separate with a comma)</label><input class="form-control" type="text" name="recipeingred"></div>
+                    <div class="form-group"><label>Directions</label><textarea class="form-control" name="recipedirections"></textarea></div>
+                    <div class="form-group"><button class="btn btn-primary btn-block" type="submit">Submit</button></div>
                 </form>
             </div>
         </section>
