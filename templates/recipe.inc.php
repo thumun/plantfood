@@ -15,7 +15,7 @@ $instruct = $_POST['ingred'];
 $desc = $_POST['direct'];
 
 if (empty($title) || empty($direct) || empty($ingred) || empty($file)) {
-  header("Location: ../addrecipe.php?error=emptyfields&title=".$title."&desc=".$desc."&instruct=".$instruct);
+  header("Location: ../addrecipe.php?error=emptyfields);
   exit();
 } else {
 
