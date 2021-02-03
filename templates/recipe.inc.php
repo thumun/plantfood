@@ -13,11 +13,9 @@
       let response = await fetch(``, {
         method: 'POST',
         body: JSON.stringify({
-          title: movie.title,
-          posterPath: movie.poster_path,
-          movieDBid: movie.id,
-          releaseDate: movie.release_date,
-          watched: false
+          title: title,
+          directions: directions,
+          ingredients: returnArray(ingredients),
         }),
         headers: new Headers({
           'Content-Type': 'application/json',
