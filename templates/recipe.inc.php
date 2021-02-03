@@ -1,7 +1,16 @@
 <script type="text/javascript">
-  const addMovie = (movie) => {
-    async function addingMovie() {
-      let response = await fetch(`${APIURL}/watchlist`, {
+  function returnArray(string) {
+    if(string === ""){
+      return null
+    } else {
+      let newArray = string.split(",").map(item => item.trim() )
+      return newArray
+    }
+  }
+
+  function addRecipe () {
+    async function addingRecipe() {
+      let response = await fetch(``, {
         method: 'POST',
         body: JSON.stringify({
           title: movie.title,
@@ -18,17 +27,13 @@
         
         response = await response.json()
               
-        if (typeof response === "object") {
-            if(response.error.name === "SequelizeUniqueConstraintError"){
-                alert.show('Movie already on Watchlist!')
-            } else {
-                alert.error("There was a problem with the server, try again later!")
-            }
+        if(response.recipe){
+          let recipeId = response.recipe.id
         } else {
-            alert.success(`${response}`)
+          alert("There was an error with the server! Try again later.")
         }
       } 
-      addingMovie()
+      addingRecipe()
 }
   
   
